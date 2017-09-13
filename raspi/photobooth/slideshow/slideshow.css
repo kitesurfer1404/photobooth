@@ -1,0 +1,103 @@
+* {
+  margin:0;
+  padding:0;
+  cursor:none;
+}
+
+html {
+  height:100%;
+}
+
+body {
+  font-family: Arial,sans-serif;
+  height:100%;
+  background:url('background.jpg') center center no-repeat;
+}
+
+#slideshow-table {
+  margin:auto;
+  display:table;
+  height:100%;
+  width:100%;
+}
+
+#slideshow-cell {
+  display:table-cell;
+  vertical-align:middle;
+  height:100%;
+  width:100%;
+}
+
+#slideshow {
+  position:relative;
+  margin:auto;
+  width:1280px;
+  height:860px;
+  overflow:hidden;
+  border:22px solid #141414;
+}
+
+#slideshow img {
+  position:absolute;
+  width:1280px;
+  height:860px;
+  top:50%;
+  left:50%;
+  margin-left:-640px;
+  margin-top:-430px;
+  opacity:0;
+  -webkit-transition-property: opacity, -webkit-transform;
+  -webkit-transition-duration: 3s, 10s;
+     -moz-transition-property: opacity, -moz-transform;
+     -moz-transition-duration: 3s, 10s;
+      -ms-transition-property: opacity, -ms-transform;
+      -ms-transition-duration: 3s, 10s;
+       -o-transition-property: opacity, -o-transform;
+       -o-transition-duration: 3s, 10s;
+          transition-property: opacity, transform;
+          transition-duration: 3s, 10s;
+}
+
+#slideshow img  {
+  -webkit-transform-origin: bottom left;
+     -moz-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+       -o-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+#slideshow :nth-child(2n+1) {
+  -webkit-transform-origin: top right;
+     -moz-transform-origin: top right;
+      -ms-transform-origin: top right;
+       -o-transform-origin: top right;
+          transform-origin: top right;
+}
+
+#slideshow :nth-child(3n+1) {
+  -webkit-transform-origin: top left;
+     -moz-transform-origin: top left;
+      -ms-transform-origin: top left;
+       -o-transform-origin: top left;
+          transform-origin: top left;
+}
+#slideshow :nth-child(4n+1) {
+  -webkit-transform-origin: bottom right;
+     -moz-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+       -o-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+#slideshow .fx:first-child + img ~ img  {
+  z-index:-1;
+}
+
+#slideshow .fx {
+  opacity:1;
+  -webkit-transform: scale(1.05);
+     -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+       -o-transform: scale(1.05);
+          transform: scale(1.05);
+}

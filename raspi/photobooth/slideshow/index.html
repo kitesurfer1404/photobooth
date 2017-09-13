@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+
+	<title>WiFi Photobooth</title>
+
+	<link rel="stylesheet" type="text/css" href="slideshow.css" />
+
+	<script type="text/javascript">
+    var image_path='/images/processed/';
+    var image_extension='.JPG';
+ 
+    var reference_id = 0;
+	
+	var img_queue = [];
+	var images = [];
+
+	var kenburns_images = [];
+	var kenburns_index = 0;
+	var kenburns_queue_length = 0;
+	var kenburns_interval = 5;
+	var kenburns_timer;
+	
+	var ajax_interval = 5;
+	var ajax_url = '/image_count.txt';
+	var ajax_timer;
+	</script>
+
+	<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="slideshow.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<div id="slideshow-table"><div id="slideshow-cell">
+		<div id="slideshow">
+			<img alt="img" src="" />
+			<img alt="img" src="" />
+			<img alt="img" src="" />
+			<img alt="img" src="" />
+		</div>
+	</div></div>
+
+</body>
+</html>
