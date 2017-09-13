@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>WiFi Photobooth PrinterCtrl</title>
+
+	<link rel="stylesheet" type="text/css" href="printer.css" />
+
+	<script type="text/javascript">
+    var photobooth_server='http://10.0.0.1:8000';
+    var image_path='/images/processed/';
+    var image_extension='.JPG';
+ 
+    var reference_id = 0;
+	
+	var ajax_interval = 5;
+	var ajax_url = photobooth_server + '/image_count.txt';
+	var ajax_timer;
+	</script>
+
+	<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script src="printer.js" type="text/javascript"></script>
+</head>
+<body>
+	<img id="print_image" src="" />
+    <img id="current_image" src="" />
+	<div id="imagelist"></div>
+</body>
+</html>
+
+
