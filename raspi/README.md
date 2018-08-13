@@ -68,6 +68,20 @@ Reboot:
 sudo reboot
 ```
 
+Alternatively you can add the script to the crontab and run it at reboot:
+
+```shell
+crontab -e
+```
+
+Add this line:
+```
+@reboot /home/pi/photobooth/photobooth.sh
+```
+
+(Adjust path accordingly)
+
+
 
 WiFi config/AP
 --------------
