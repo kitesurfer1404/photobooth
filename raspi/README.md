@@ -202,6 +202,8 @@ Connect a momentary switch between Pin 26 and GND on the GPIOs.
 
 If you want to skip this, shutdown with a keyboard or so.
 
+You might also want to try to add dtoverlay=gpio-shutdown,gpio-pin=X to /boot/config.txt (Thanks to @sxwid) instead of using the shutdown script.
+
 
 
 (Almost) Done!
