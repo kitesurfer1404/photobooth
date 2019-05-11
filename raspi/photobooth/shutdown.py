@@ -1,7 +1,7 @@
 # Connect a momentary switch between GND and this pin.
 # As soon as this pin is switched to ground, the RasPi will shut down.
 # For numbering see: 
-# https://www.raspberrypi.org/documentation/usage/gpio-plus-and-raspi2/
+# https://www.raspberrypi.org/documentation/usage/gpio/README.md
 shutdown_pin = 26
 
 ################################################################################
